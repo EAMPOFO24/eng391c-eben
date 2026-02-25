@@ -1,0 +1,44 @@
+
+body{ 
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #7a6363;
+        }
+
+        h1 {
+            color: #ffc848;
+            background-color: #312d2d;
+            padding: 20px;    
+        }
+        p {
+        margin: 1.5rem;
+        }
+        
+        img {
+        float: right;
+        margin: 0.75rem;
+        border: 2px solid #ffffff;
+        max-width: 100x;
+        }
+        h2{
+            margin-top: 2rem;
+            color: rgb(255, 255, 255);
+        }
+        hr{
+            border: 1.5px solid rgb(0, 0, 0);
+        }
+        main {
+            border: 4px white solid;
+            margin: 2rem;
+            margin-top: 0;
+            background-color: rgb(55, 51, 51);
+            max-width: 45rem;
+        }
+        ul{
+            color: #fafafa;
+        }
+        address a{
+            color: rgb(137, 137, 234);
+        } 
+        a{
+            color: white;
+        }
