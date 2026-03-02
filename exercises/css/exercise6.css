@@ -1,0 +1,57 @@
+
+body{ 
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #7a6363;
+        }
+
+        h1 {
+            color: #ffc848;
+            background-color: #312d2d;
+            padding: 20px; 
+            text-transform: uppercase;  
+            font-family: "Bebas Neue", sans-serif;
+        }
+        p {
+        margin: 1.5rem;
+        line-height:  1.5rem;
+        font-family: 'Courier New', Courier, monospace;
+        }
+        
+        img {
+        float: right;
+        margin: 0.75rem;
+        border: 2px solid #ffffff;
+        max-width: 100;
+        }
+        h2{
+            margin-top: 2rem;
+            color: rgb(255, 255, 255);
+        }
+        hr{
+            border: 1.5px solid rgb(0, 0, 0);
+        }
+        main {
+            border: 2px white solid;
+            margin: 2rem;
+            margin-top: 0;
+            background-color: rgb(55, 51, 51);
+            max-width: 45rem;
+        }
+        ul{
+            color: #fafafa;
+        }
+        a:link{
+            color: rgb(137, 137, 234);
+            text-decoration: none;
+
+        } 
+        a:visited{
+            color: rgb(247, 95, 255);
+            margin: 2rem;
+        }
+        a:hover{
+            color: #ffc848;
+        }
+        a:active{
+            color: aqua;
+        }
