@@ -1,0 +1,47 @@
+h2 {
+    text-align: center;
+    background-color: aliceblue;
+    padding: 12px;
+    margin: 0px;
+}
+
+h1 {
+    color: red;
+    font-size: 50px;
+}
+
+li{
+    list-style-type: none;
+    background-color: beige;
+}
+
+nav li{
+    list-style-type: none;
+    background-color: black;
+}
+
+nav a{
+    text-decoration: none;
+    color: lightgray;
+    padding: 25px;
+}
+
+nav a:hover {
+    color: palegoldenrod;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: content;
+    background-color: black;
+    padding: 25px;
+    margin: 1rem;
+}
+
+footer {
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 25px;
+}
