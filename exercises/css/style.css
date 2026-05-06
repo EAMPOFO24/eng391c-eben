@@ -36,17 +36,15 @@ body {
 }
 
 .logo {
+    text-decoration: none;
+    margin-right: 0rem;
+}
+
+.logo img {
     width: 2.5rem;
     height: 2.5rem;
-    border: 2px solid #111111;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    margin-right: 0rem;
-    text-decoration: none;
-    color: #111111;
+    display: block;
+    object-fit: contain;
 }
 
 .navlinks {
@@ -219,13 +217,13 @@ body {
 
 /* Mission — pipeline */
 .mission-section {
-    background-color: #111111;
-    padding: 4rem 1.5rem;
+    background-color: #f4f1eb;
+    padding: 4rem 4rem;
     margin-top: 2rem;
 }
 
 .mission-section .section-title {
-    color: #aaaaaa;
+    color: #555555;
     margin-bottom: 3rem;
 }
 
@@ -405,24 +403,24 @@ body {
 
 /* Campus involvement */
 
-.campus-hero {
+.data-hero {
     border-radius: 0 1rem 1rem 0;
 }
 
-.campus-hero img {
+.data-hero img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
 }
 
-.campus-hero2 {
+.campus-hero {
     max-width: 1100px;
     margin: 0 auto 0 auto;
     padding: 0 1.5rem;
 }
 
-.campus-hero2 img {
+.campus-hero img {
     width: 100%;
     height: 420px;
     object-fit: cover;
@@ -431,7 +429,7 @@ body {
 }
 
 /* Campus involvement text below the hero image */
-.campus-text {
+.campus-box{
     max-width: 1100px;
     margin: 0 auto 5rem auto;
     padding: 0 1.5rem;
@@ -439,7 +437,7 @@ body {
     border-radius: 0 0 18px 18px;
 }
 
-.campus-text-inner {
+.campus-text {
     padding: 2.5rem;
 }
 
@@ -493,13 +491,13 @@ body {
 }
 
 /* Right side: form */
-.contact-form-wrap {
+.contact-wrap {
     background-color: white;
     border-radius: 18px;
     padding: 2.5rem;
 }
 
-.contact-form-group {
+.contact-group {
     margin-bottom: 1.25rem;
 }
 
