@@ -20,24 +20,23 @@ body {
     right: 0;
     padding: 0;
     z-index: 100;
-    background-color: transparent;
 }
 
 .navbar {
     background-color: white;
     border-radius: 0 0 1rem 1rem;
-    padding: 1rem 1.5rem;
+    padding: 1rem clamp(1rem, 3vw, 1.5rem);
     max-width: 100%;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
-    box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.08);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
 }
 
 .logo {
     text-decoration: none;
-    margin-right: 0rem;
+    justify-self: start;
 }
 
 .logo img {
@@ -51,23 +50,21 @@ body {
     list-style: none;
     display: flex;
     justify-content: center;
-    margin: 0;
-    padding: 0;
+    margin: 0 auto;
+    margin-left: 1.85rem;
+    width: 100%
 }
 
 .navlinks li {
-    font-weight:200;
-    margin-right: 1.5rem;
+    font-weight: 200;
+    margin-right: clamp(1rem, 8vw, 10rem);
 }
 
-.navlinks li:last-child {
-    margin-right: 0;
-}
 
 .navlinks a {
     text-decoration: none;
     color: #000000;
-    font-size: 1rem;
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
 }
 
 /* Active page link */
@@ -76,47 +73,62 @@ body {
     font-weight: bold;
 }
 
+
 .navbutton {
     text-decoration: none;
     color: white;
     background-color: #ef4343;
-    padding: 0.7rem 1.2rem;
+    justify-self: end;
+    padding: 0.6rem clamp(0.75rem, 2vw, 1.2rem);
     border-radius: 999px;
-    font-size: 1rem;
-    margin-left: 1rem;
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
+    margin-left: 0rem;
+    white-space: nowrap;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
 
 /* HOME PAGE */
 
 .introsection {
-    max-width: 1100px;
+    position: relative;
+    max-width: min(1100px, 95vw);
     margin: 0 auto;
     min-height: 520px;
     border-radius: 24px;
-    background-size: cover;
-    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.hero-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+    z-index: 0;
+}
+
 .introoverlay {
     text-align: center;
     color: white;
-    padding: 11rem 8rem;
-    background-color: rgba(0, 0, 0, 0.25);
+    padding: clamp(3rem, 10vw, 11rem) clamp(2rem, 8vw, 8rem);
+    background-color: rgba(0, 0, 0, 0.45);
     border-radius: 18px;
+    position: relative;
+    z-index: 1;
 }
 
 .introoverlay h1 {
-    margin: 0;
-    font-size: 4rem;
+    font-size: clamp(2.5rem, 5vw, 4rem);
     font-weight: bold;
 }
 
 .skills {
     margin-top: 1rem;
-    font-size: 1.1rem;
+    font-size: 1rem;
     letter-spacing: 0.08em;
 }
 
@@ -129,35 +141,36 @@ body {
 
 .biosection h2 {
     margin-bottom: 0.75rem;
+    font-weight: normal;
 }
 
 .biosection p {
-    line-height: 1.6;
+    line-height: 1.8;
     font-size: 1rem;
+    color: #333333;
 }
 
 /* ABOUT PAGE */
 
-/* About page hero */
 .about-introsection {
-    max-width: 1100px;
-    margin: 0 auto;
-    margin-top: 1rem;
+    position: relative;
+    max-width: min(1100px, 95vw);
+    margin: 1rem auto 0 auto;
     min-height: 520px;
     border-radius: 24px;
-    background-image: url("../../images/Headshot-no-earring.jpg");
-    background-size: cover;
-    background-position: center;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-end;
 }
 
-.aboutoverlay {
-    text-align: left;
-    align-self: flex-end;
-    padding-left: 2.5rem;
-    width: 50%;
+.about-hero-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
 }
 
 .whoami-section {
@@ -168,13 +181,14 @@ body {
 
 .section-title {
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1rem;
+    font-weight: normal;
     letter-spacing: 0.15em;
     color: #555555;
     margin-bottom: 3rem;
 }
 
-/* Who am I */
+/* Who Am I grid */
 .whoami-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -184,12 +198,9 @@ body {
 .whoami-block {
     background-color: white;
     border-radius: 18px;
+    margin: 1rem;
     padding: 2rem;
-    margin-right: 1.5rem;
-}
-
-.whoami-block:last-child {
-    margin-right: 0;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
 }
 
 .whoami-block h3 {
@@ -208,17 +219,10 @@ body {
     margin: 0;
 }
 
-.about-block-list li {
-    text-align: left;
-    font-size: 1.5rem;
-    color: white;
-    list-style: none;
-}
-
 /* Mission — pipeline */
 .mission-section {
     background-color: #f4f1eb;
-    padding: 4rem 4rem;
+    padding: 4rem 4rem 9rem 4rem;
     margin-top: 2rem;
 }
 
@@ -227,7 +231,6 @@ body {
     margin-bottom: 3rem;
 }
 
-/* Pipeline */
 .pipeline {
     max-width: 1100px;
     margin: 0 auto;
@@ -236,7 +239,6 @@ body {
     align-items: center;
 }
 
-/* The arrow connector */
 .pipeline-arrow {
     color: #ef4343;
     font-size: 1.5rem;
@@ -244,16 +246,16 @@ body {
     padding: 0 0.5rem;
 }
 
-/* boxes */
-.pipeline-step {
+.pipeline-block {
     background-color: #1e1e1e;
     border-radius: 14px;
     padding: 1.5rem;
     text-align: center;
     border: 1px solid #333333;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
 }
 
-.pipeline-step .step-label {
+.pipeline-block .step-label {
     display: block;
     font-size: 0.75rem;
     text-transform: uppercase;
@@ -262,25 +264,25 @@ body {
     margin-bottom: 0.5rem;
 }
 
-.pipeline-step h4 {
+.pipeline-block h4 {
     font-size: 1rem;
     font-weight: bold;
     color: white;
     margin: 0 0 0.5rem 0;
 }
 
-.pipeline-step p {
+.pipeline-block p {
     font-size: 0.8rem;
-    color: #888888;
+    color: #999999;
     line-height: 1.5;
-    margin: 0;
 }
 
 /* EXPERIENCE PAGE */
 
 .exp-page-title {
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1rem;
+    font-weight: normal;
     letter-spacing: 0.15em;
     color: #555555;
     margin: 3rem 0 2.5rem 0;
@@ -291,6 +293,7 @@ body {
     margin: 2rem auto 0.75rem auto;
     padding: 0 1.5rem;
     display: block;
+    
 }
 
 .exp-block-title {
@@ -300,37 +303,42 @@ body {
     letter-spacing: 0.08em;
     color: #ef4343;
     padding: 0.25rem 0 1rem 0.5rem;
+    margin: 0;
 }
 
-.exp-block2 {
+/* Content card inside each experience block */
+.exp-card {
     background-color: white;
     border-radius: 25px;
     padding: 2rem;
     margin-top: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
 }
 
-.exp-block2 h3 {
-    font-size: 1.1rem;
+.exp-card h3 {
+    font-size: 1rem;
     font-weight: bold;
     margin: 0 0 0.75rem 0;
     color: #111111;
 }
 
-.exp-block2 p {
+.exp-card p {
     font-size: 0.95rem;
     line-height: 1.7;
     color: #444444;
     margin: 0 0 1rem 0;
 }
+
 .exp-block-list {
     list-style: disc;
     padding-left: 1.5rem;
 }
 
-.exp-block-list li{
+.exp-block-list li {
     font-weight: 100;
-    margin: 1rem 1rem 1rem 1rem;
+    margin: 1rem;
 }
+
 .exp-link {
     text-decoration: none;
     color: #ef4343;
@@ -340,7 +348,7 @@ body {
     padding-bottom: 0.1rem;
 }
 
-/* Divider between Academic and Personal sections */
+/* Divider between experience sections */
 .exp-divider {
     max-width: 1100px;
     margin: 2rem auto;
@@ -349,7 +357,7 @@ body {
     border-top: 1px solid #dddddd;
 }
 
-/* Resume at bottom of experience page */
+/* Resume download at bottom of experience page */
 .exp-resume {
     text-align: center;
     padding: 3rem 1.5rem 5rem 1.5rem;
@@ -360,18 +368,18 @@ body {
     margin-bottom: 1rem;
 }
 
-/* REAL APPLICATION PAGE */
-
-.ra-page-title {
+/* DATA IN PRACTICE PAGE */
+.datapractice-page-title {
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1rem;
+    font-weight: normal;
     letter-spacing: 0.15em;
     color: #555555;
     margin: 3rem 0 2.5rem 0;
 }
 
-/* Two-column row*/
-.ra-split {
+/* Two-column split: text left, image right */
+.datapractice-split {
     max-width: 1100px;
     margin: 0 auto 3rem auto;
     padding: 0 1.5rem;
@@ -379,14 +387,14 @@ body {
     grid-template-columns: 1fr 1fr;
 }
 
-.ra-split-text {
+.datapractice-split-text {
     background-color: white;
     border-radius: 18px 0 0 18px;
     padding: 2.5rem;
 }
 
-.ra-split-text h2 {
-    font-size: 1.1rem;
+.datapractice-split-text h2 {
+    font-size: 1rem;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 0.06em;
@@ -394,33 +402,34 @@ body {
     margin: 0 0 1rem 0;
 }
 
-.ra-split-text p {
+.datapractice-split-text p {
     font-size: 0.95rem;
     line-height: 1.7;
     color: #444444;
-    margin: 0;
 }
 
-/* Campus involvement */
-
-.data-hero {
-    border-radius: 0 1rem 1rem 0;
+/* Right-side analytics dashboard image */
+.analytics-image {
+    border-radius: 0 18px 18px 0;
+    overflow: hidden;
+    min-height: 260px;
 }
 
-.data-hero img {
+.analytics-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
 }
 
-.campus-hero {
+/* Campus involvement full image */
+.campus-image-container {
     max-width: 1100px;
-    margin: 0 auto 0 auto;
+    margin: 0 auto;
     padding: 0 1.5rem;
 }
 
-.campus-hero img {
+.campus-image-container img {
     width: 100%;
     height: 420px;
     object-fit: cover;
@@ -428,8 +437,8 @@ body {
     display: block;
 }
 
-/* Campus involvement text below the hero image */
-.campus-box{
+/* Campus involvement text panel below the image */
+.campus-details {
     max-width: 1100px;
     margin: 0 auto 5rem auto;
     padding: 0 1.5rem;
@@ -437,12 +446,12 @@ body {
     border-radius: 0 0 18px 18px;
 }
 
-.campus-text {
+.campus-details-text {
     padding: 2.5rem;
 }
 
-.campus-text h2 {
-    font-size: 1.1rem;
+.campus-details-text h2 {
+    font-size: 1rem;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 0.06em;
@@ -450,26 +459,26 @@ body {
     margin: 0 0 1rem 0;
 }
 
-.campus-text p {
+.campus-details-text p {
     font-size: 0.95rem;
     line-height: 1.7;
     color: #444444;
-    margin: 0;
 }
 
 /* CONTACT PAGE */
 
-/* Two column*/
+/* Two-column: headline left, form right */
 .contact-section {
     max-width: 1100px;
     margin: 3rem auto 3rem auto;
     padding: 0 1.5rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 2rem;
 }
 
 .contact-text {
-    padding: 2rem 3rem 2rem 0;
+    padding: 2rem 2rem 2rem 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -490,7 +499,6 @@ body {
     margin: 0;
 }
 
-/* Right side: form */
 .contact-wrap {
     background-color: white;
     border-radius: 18px;
@@ -537,13 +545,14 @@ body {
     margin-top: 0.5rem;
 }
 
-/* Social blocks */
+/* Social links */
 .social-section {
     max-width: 1100px;
     margin: 0 auto 5rem auto;
     padding: 0 1.5rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
 }
 
 .social-block {
@@ -556,11 +565,6 @@ body {
     align-items: center;
     text-decoration: none;
     color: #111111;
-    margin-right: 1.5rem;
-}
-
-.social-block:last-child {
-    margin-right: 0;
 }
 
 .social-block img {
@@ -570,8 +574,18 @@ body {
     margin-bottom: 1rem;
 }
 
-.social-block span {
+.social-block p {
     font-size: 1rem;
     font-weight: bold;
     color: #111111;
+}
+
+/* footer */
+
+.webpagefooter {
+    text-align: center;
+    padding: 2rem 1.5rem;
+    font-size: 0.8rem;
+    color: #000000;
+    border-top: 1px solid #2c2c2c;
 }
